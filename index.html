@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdoms RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-form" class="form">
+        <h2>Login / Sign Up</h2>
+        <input type="text" id="username" placeholder="Enter your username" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button onclick="signUp()">Sign Up</button>
+        <button onclick="logIn()">Log In</button>
+    </div>
+    <div id="kingdom-dashboard" class="dashboard" style="display:none;">
+        <h2>Welcome, <span id="player-name"></span></h2>
+        <div id="kingdom-info">
+            <p>Resources: Wood: 500, Stone: 400, Gold: 300</p>
+            <p>Army: 50 soldiers | Defense: 70 walls</p>
+            <button onclick="createAlliance()">Create Alliance</button>
+            <button onclick="viewAlliance()">View Alliance</button>
+            <button onclick="tradeWithWizard()">Trade with Wizard</button>
+        </div>
+        <div id="kingdom-list">
+            <h3>All Kingdoms</h3>
+            <ul id="kingdoms-list"></ul>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
